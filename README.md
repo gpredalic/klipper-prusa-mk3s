@@ -32,7 +32,7 @@ is_system_service: False
 managed_services: klipper
 ```
 
-2. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.template.cfg to `printer.cfg` in your klipper config
+2. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg to `printer.cfg` in your klipper config
 3. Adjust config to your hardware
 4. Flash Klipper to your printer https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller
 
