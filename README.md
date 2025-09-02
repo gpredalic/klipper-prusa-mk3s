@@ -9,7 +9,7 @@ Stock Prusa MK3s + BTT SKR 1.4T w/ TMC 2209 + 60W Heater Cartridge + PT1000 Pro 
 ## Pre-Check
 - Get Z offset value from your current firmware (Menu -> Calibration -> Z-offset), you will need it for the Klipper config.
 - Your bed needs to be perpendicular (based on XYZ Calibration). If not you will have to do the skew calibration before printing or you risk crashing your nozzle to the bed.
-- Read https://github.com/dz0ny/klipper-prusa-mk3s/blob/main/printer.template.cfg
+- Read https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg
 - Read https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller
 
 ## Install
