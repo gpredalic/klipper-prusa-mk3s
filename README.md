@@ -1,8 +1,12 @@
 # Kliper on Prusa MK3s
 Structured Klipper config for Prusa MK3s/MK3s+ 3D printer, inspired by https://github.com/Rat-OS/RatOS-configuration
 
-## Pre-Check
+Based on [dz0ny's MK3s Klipper config](https://github.com/dz0ny/klipper-prusa-mk3s) and
+         [Ishan Jaidka's MK3s Klipper config](https://github.com/Ishan-Jaidka/Klipper-Cfg-Backup-Prusa-SKR1.4t-2209)
 
+Stock Prusa MK3s + BTT SKR 1.4T w/ TMC 2209 + 60W Heater Cartridge + PT1000 Pro Thermistor + Dragon Hoten v2
+
+## Pre-Check
 - Get Z offset value from your current firmware (Menu -> Calibration -> Z-offset), you will need it for the Klipper config.
 - Your bed needs to be perpendicular (based on XYZ Calibration). If not you will have to do the skew calibration before printing or you risk crashing your nozzle to the bed.
 - Read https://github.com/dz0ny/klipper-prusa-mk3s/blob/main/printer.template.cfg
@@ -12,7 +16,7 @@ Structured Klipper config for Prusa MK3s/MK3s+ 3D printer, inspired by https://g
 1. Install https://docs.mainsail.xyz/setup/mainsail-os to SDCard and RPI Zero 2 W
 2. Connect as described in https://help.prusa3d.com/en/article/raspberry-pi-zero-w-preparation-and-installation_2180
 3. Update all components under Machine tab, otherwise config might not be able to load
-4. Clone config ```git clone https://github.com/dz0ny/klipper-prusa-mk3s.git ~/printer_data/config/klipper-prusa-mk3s```
+4. Clone config ```git clone https://github.com/gpredalic/klipper-prusa-mk3s.git ~/printer_data/config/klipper-prusa-mk3s```
 
   > If you are adding this configuration after installing Klipper via [KIAUH](https://github.com/th33xitus/kiauh), the directory might be different - typically following `~/[printer_name]/printer_data/config`, where `[printer_name]` is the name you selected during the Kiauh installation
 
@@ -21,7 +25,7 @@ Structured Klipper config for Prusa MK3s/MK3s+ 3D printer, inspired by https://g
 ```yml
 [update_manager prusa]
 type: git_repo
-origin: https://github.com/dz0ny/klipper-prusa-mk3s.git
+origin: https://github.com/gpredalic/klipper-prusa-mk3s.git
 path: ~/printer_data/config/klipper-prusa-mk3s
 primary_branch: main
 is_system_service: False
