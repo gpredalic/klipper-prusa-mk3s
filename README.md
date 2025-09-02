@@ -23,7 +23,7 @@ Stock Prusa MK3s + BTT SKR 1.4T w/ TMC 2209 + 60W Heater Cartridge + PT1000 Pro 
 5. Add the following to the to `moonraker.conf` to enable automatic updates
 
 ```yml
-[update_manager prusa]
+[update_manager PrusaMK3s]
 type: git_repo
 origin: https://github.com/gpredalic/klipper-prusa-mk3s.git
 path: ~/printer_data/config/klipper-prusa-mk3s
@@ -32,13 +32,13 @@ is_system_service: False
 managed_services: klipper
 ```
 
-2. Copy https://github.com/dz0ny/klipper-prusa-mk3s/blob/main/printer.template.cfg to `printer.cfg` in your klipper config
+2. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.template.cfg to `printer.cfg` in your klipper config
 3. Adjust config to your hardware
 4. Flash Klipper to your printer https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller
 
 You will still need a USB cable as you cannot flash via an internal serial port. You can also use any other computer to compile your firmware.
 
-To use this config, the firmware should be compiled for the AVR atmega2560. To use via serial, in "make menuconfig" select "Enable extra low-level configuration options" and select **serial1** (the RasPi serial) or **serial0** when you plan to connect via the USB.
+To use this config, the firmware should be compiled for the LPC1769. To use via serial, in "make menuconfig" select "Enable extra low-level configuration options" and select **serial1** (the RasPi serial) or **serial0** when you plan to connect via the USB.
 
 To flash:
 `make flash FLASH_DEVICE=/dev/serial/by-id/usb-Prusa_Research__prusa3d.com__Original_Prusa_i3_MK3_CZPX0620X004XK70128-if00`
