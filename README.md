@@ -38,7 +38,7 @@ managed_services: klipper
 
 You will still need a USB cable as you cannot flash via an internal serial port. You can also use any other computer to compile your firmware.
 
-To use this config, the firmware should be compiled for the LPC1769. To use via serial, in "make menuconfig" select "Enable extra low-level configuration options" and select **serial1** (the RasPi serial) or **serial0** when you plan to connect via the USB.
+To use this config, the firmware should be compiled for the LPC176X. To use via serial, in "make menuconfig" select "Enable extra low-level configuration options" and select **serial1** (the RasPi serial) or **serial0** when you plan to connect via the USB.
 
 To flash:
 `make flash FLASH_DEVICE=/dev/serial/by-id/usb-Prusa_Research__prusa3d.com__Original_Prusa_i3_MK3_CZPX0620X004XK70128-if00`
