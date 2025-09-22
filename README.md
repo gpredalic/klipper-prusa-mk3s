@@ -1,19 +1,24 @@
 # Kliper on Prusa MK3s
 Structured Klipper config for Prusa MK3s/MK3s+ 3D printer, inspired by https://github.com/Rat-OS/RatOS-configuration
 
-Based on [dz0ny's MK3s Klipper config](https://github.com/dz0ny/klipper-prusa-mk3s) and
-         [Ishan Jaidka's MK3s Klipper config](https://github.com/Ishan-Jaidka/Klipper-Cfg-Backup-Prusa-SKR1.4t-2209)
+Based on [dz0ny's MK3s Klipper config](https://github.com/dz0ny/klipper-prusa-mk3s) and [Ishan Jaidka's MK3s Klipper config](https://github.com/Ishan-Jaidka/Klipper-Cfg-Backup-Prusa-SKR1.4t-2209)
 
-Stock Prusa MK3s + BTT SKR 1.4T w/ TMC 2209 + 60W Heater Cartridge + PT1000 Pro Thermistor + Dragon Hoten v2
+- Stock Prusa MK3s
+- BTT SKR 1.4 Turbo or NA
+- TMC 2209
+- 60W Heater Cartridge
+- PT1000 Pro Thermistor
+- Dragon Hoten v2
+- 0.4 or 0.6 Nozzle
 
 ## Pre-Check
 - Get Z offset value from your current firmware (Menu -> Calibration -> Z-offset), you will need it for the Klipper config.
 - Your bed needs to be perpendicular (based on XYZ Calibration). If not you will have to do the skew calibration before printing or you risk crashing your nozzle to the bed.
-- Read https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg
+- Read https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg.example
 - Read https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller
 
 ## Install
-1. Install https://docs.mainsail.xyz/setup/mainsail-os to SDCard and RPI Zero 2 W
+1. Install https://docs.mainsail.xyz/setup/mainsail-os to SDCard and RPI
 2. Connect as described in https://help.prusa3d.com/en/article/raspberry-pi-zero-w-preparation-and-installation_2180
 3. Update all components under Machine tab, otherwise config might not be able to load
 4. Clone config ```git clone https://github.com/gpredalic/klipper-prusa-mk3s.git ~/printer_data/config/klipper-prusa-mk3s```
@@ -32,7 +37,7 @@ is_system_service: False
 managed_services: klipper
 ```
 
-2. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg.example to `printer.cfg` in your klipper config
+6. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg.example to `printer.cfg` in your klipper config
 
 To use this config, the firmware should be compiled for the LPC176X. To use via serial, in "make menuconfig" select "Enable extra low-level configuration options" and select **serial1** (the RasPi serial) or **serial0** when you plan to connect via the USB.
 
