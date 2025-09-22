@@ -32,23 +32,22 @@ is_system_service: False
 managed_services: klipper
 ```
 
-2. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg to `printer.cfg` in your klipper config
-3. Adjust config to your hardware
-4. Flash Klipper to your printer https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller
-
-You will still need a USB cable as you cannot flash via an internal serial port. You can also use any other computer to compile your firmware.
+2. Copy or link https://github.com/gpredalic/klipper-prusa-mk3s/blob/main/printer.cfg.example to `printer.cfg` in your klipper config
 
 To use this config, the firmware should be compiled for the LPC176X. To use via serial, in "make menuconfig" select "Enable extra low-level configuration options" and select **serial1** (the RasPi serial) or **serial0** when you plan to connect via the USB.
 
-To flash:
-`make flash FLASH_DEVICE=/dev/serial/by-id/usb-Prusa_Research__prusa3d.com__Original_Prusa_i3_MK3_CZPX0620X004XK70128-if00`
-
-7. Print
-
+```
+sudo apt update
+sudo apt install python3 python3-venv python3-dev python3-pip git
+cd ~/klipper
+make menuconfig
+make
+cp ~/klipper/out/klipper.bin ~/klipper/out/firmware.bin
+```
+Copy the firmware.bin to the root of the USB flash drive, formated with FAT32 or exFAT 
 
 ## Nice things
 [Klipper mesh on print area only install guide](https://gist.github.com/ChipCE/95fdbd3c2f3a064397f9610f915f7d02)
-
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/239513/141822711-2818978e-2b87-4110-9b93-e5f489c9cdc7.png)
