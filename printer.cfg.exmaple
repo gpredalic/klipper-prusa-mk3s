@@ -14,44 +14,40 @@ restart_method: command
 serial: /tmp/klipper_host_mcu
 
 [printer]
-kinematics: cartesian
-max_velocity: 450
-max_accel: 4400
-max_z_velocity: 25
-max_z_accel: 400
+max_accel: 2000
+max_accel_to_decel: 2000
+max_z_velocity: 20
+max_velocity: 300
+max_z_accel: 300
 
 [extruder]
-nozzle_diameter: 0.400
+nozzle_diameter: 0.400 #0.600
 filament_diameter: 1.750
 sensor_type: PT1000
 min_temp: 0
 max_temp: 450
 min_extrude_temp: 170
-pressure_advance: 0.05
+pressure_advance: 0.06
 
-# ACCELEROMETER_QUERY CHIP="chip"
-# SHAPER_CALIBRATE AXIS="axie"
+# ACCELEROMETER_QUERY CHIP=hotend
 [adxl345 hotend]
 cs_pin: rpi:None
 
+# ACCELEROMETER_QUERY CHIP=bed
 [adxl345 bed]
 cs_pin: rpi:None
 
 [resonance_tester]
+# SHAPER_CALIBRATE AXIS=x
 accel_chip_x: adxl345 hotend
+# SHAPER_CALIBRATE AXIS=y
 accel_chip_y: adxl345 bed
 probe_points:
     123, 107, 20
 
 [probe]
 [input_shaper]
-# Y AXES: 
-# To avoid too much smoothing with '2hump_ei', suggested max_accel <= 4400 mm/sec^2
-# Fitted shaper '2hump_ei' frequency = 62.6 Hz (vibrations = 0.0%, smoothing ~= 0.138)
-
-# X AXES
-# To avoid too much smoothing with '2hump_ei', suggested max_accel <= 5100 mm/sec^2
-# Fitted shaper '2hump_ei' frequency = 67.4 Hz (vibrations = 0.0%, smoothing ~= 0.119)
+# ls -la /tmp/*csv
 
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
@@ -69,8 +65,8 @@ probe_points:
 #*# pid_kd = 102.267
 #*#
 #*# [input_shaper]
-#*# shaper_type_x = 2hump_ei
-#*# shaper_freq_x = 67.4
+#*# shaper_type_x = mzv
+#*# shaper_freq_x = 59.2
 #*# shaper_type_y = mzv
 #*# shaper_freq_y = 48.2
 #*#
