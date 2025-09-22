@@ -14,8 +14,8 @@ restart_method: command
 serial: /tmp/klipper_host_mcu
 
 [printer]
+kinematics: cartesian
 max_accel: 2000
-max_accel_to_decel: 2000
 max_z_velocity: 20
 max_velocity: 300
 max_z_accel: 300
@@ -28,6 +28,12 @@ min_temp: 0
 max_temp: 450
 min_extrude_temp: 170
 pressure_advance: 0.06
+
+[z_tilt]
+speed: 50
+horizontal_move_z: 5
+retries: 10
+retry_tolerance: 0.000000
 
 # ACCELEROMETER_QUERY CHIP=hotend
 [adxl345 hotend]
@@ -70,12 +76,14 @@ probe_points:
 #*# shaper_type_y = mzv
 #*# shaper_freq_y = 48.2
 #*#
+#*# [probe]
+#*#
 #*# [bed_mesh default]
 #*# version = 1
 #*# points =
-#*# 	-0.000735, -0.014068, -0.004485
-#*# 	-0.010735, -0.007401, -0.009068
-#*# 	-0.002401, -0.012401, -0.006568
+#*# 	  0.013996, -0.010727, 0.013579
+#*# 	  0.011496, 0.001496, 0.023162
+#*# 	  0.019829, 0.019829, 0.038162
 #*# x_count = 3
 #*# y_count = 3
 #*# mesh_x_pps = 3
@@ -86,6 +94,3 @@ probe_points:
 #*# max_x = 228.0
 #*# min_y = 6.0
 #*# max_y = 210.0
-#*#
-#*# [probe]
-#*# z_offset = 0.813
