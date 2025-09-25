@@ -27,10 +27,10 @@ sensor_type: PT1000
 min_temp: 0
 max_temp: 450
 min_extrude_temp: 170
-pressure_advance: 0.06 #0.05
+pressure_advance: 0.06
 
 [z_tilt]
-retry_tolerance: 0.000001
+retry_tolerance: 0.001667
 
 # ACCELEROMETER_QUERY CHIP=hotend
 [adxl345 hotend]
@@ -49,7 +49,7 @@ probe_points:
     123, 107, 20
 
 [probe]
-z_offset: 0.8
+z_offset: 1.05
 
 [input_shaper]
 # ls -la /tmp/*csv
