@@ -10,6 +10,7 @@ Based on [dz0ny's MK3s Klipper config](https://github.com/dz0ny/klipper-prusa-mk
 - PT1000 Pro Thermistor
 - Dragon Hoten v2
 - 0.4 or 0.6 Nozzle
+- Nylock mod (M3x16mm, nylon washer, nylon nut)
 
 ## Pre-Check
 - Get Z offset value from your current firmware (Menu -> Calibration -> Z-offset), you will need it for the Klipper config.

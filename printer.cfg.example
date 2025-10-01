@@ -29,31 +29,6 @@ max_temp: 450
 min_extrude_temp: 170
 pressure_advance: 0.06
 
-[z_tilt]
-retry_tolerance: 0.001667
-
-# ACCELEROMETER_QUERY CHIP=hotend
-[adxl345 hotend]
-cs_pin: rpi:None
-
-# ACCELEROMETER_QUERY CHIP=bed
-[adxl345 bed]
-cs_pin: rpi:None
-
-[resonance_tester]
-# SHAPER_CALIBRATE AXIS=x
-accel_chip_x: adxl345 hotend
-# SHAPER_CALIBRATE AXIS=y
-accel_chip_y: adxl345 bed
-probe_points:
-    123, 107, 20
-
-[probe]
-z_offset: 1.05
-
-[input_shaper]
-# ls -la /tmp/*csv
-
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
 #*#
@@ -74,20 +49,3 @@ z_offset: 1.05
 #*# shaper_freq_x = 59.2
 #*# shaper_type_y = mzv
 #*# shaper_freq_y = 48.2
-#*#
-#*# [bed_mesh default]
-#*# version = 1
-#*# points =
-#*# 	  0.037214, 0.020548, 0.071381
-#*# 	  0.137214, 0.068048, 0.023048
-#*# 	  0.153881, 0.078881, 0.058048
-#*# x_count = 3
-#*# y_count = 3
-#*# mesh_x_pps = 3
-#*# mesh_y_pps = 3
-#*# algo = bicubic
-#*# tension = 0.2
-#*# min_x = 24.0
-#*# max_x = 228.0
-#*# min_y = 6.0
-#*# max_y = 210.0
