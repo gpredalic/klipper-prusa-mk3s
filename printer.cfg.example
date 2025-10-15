@@ -11,7 +11,7 @@ baud: 250000
 restart_method: command
 
 [mcu rpi]
-serial: /tmp/klipper_host_mcu
+serial: /dev/pts/0
 
 [printer]
 kinematics: cartesian
@@ -51,4 +51,4 @@ pressure_advance: 0.06
 #*# shaper_freq_y = 48.2
 #*#
 #*# [probe]
-#*# z_offset = 1.15
+#*# z_offset = 1.150
