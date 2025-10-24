@@ -7,11 +7,10 @@
 
 [mcu]
 serial: /dev/serial/by-id/usb-Klipper_lpc1769_09B0010DE284D795E0674762C32000F5-if00
-baud: 250000
 restart_method: command
 
 [mcu rpi]
-serial: /dev/pts/0
+serial: /tmp/klipper_host_mcu
 
 [printer]
 kinematics: cartesian
