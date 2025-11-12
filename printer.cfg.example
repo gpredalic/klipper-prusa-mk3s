@@ -22,9 +22,10 @@ max_z_accel: 300
 [extruder]
 nozzle_diameter: 0.400 #0.600
 filament_diameter: 1.750
-sensor_type: PT1000
+sensor_type: EPCOS 100K B57560G104F #PT1000
+smooth_time: 1.0
 min_temp: 0
-max_temp: 450
+max_temp: 305
 min_extrude_temp: 170
 pressure_advance: 0.06
 
@@ -50,4 +51,4 @@ pressure_advance: 0.06
 #*# shaper_freq_y = 48.2
 #*#
 #*# [probe]
-#*# z_offset = 1.150
+#*# z_offset = 0.8
