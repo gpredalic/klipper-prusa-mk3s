@@ -3,14 +3,17 @@ Structured Klipper config for Prusa MK3s/MK3s+ 3D printer, inspired by https://g
 
 Based on [dz0ny's MK3s Klipper config](https://github.com/dz0ny/klipper-prusa-mk3s) and [Ishan Jaidka's MK3s Klipper config](https://github.com/Ishan-Jaidka/Klipper-Cfg-Backup-Prusa-SKR1.4t-2209)
 
-- Stock Prusa MK3s
+- Stock Prusa MK3s X, Y, E Motors
+- Stock Prusa MK3s Frame
+- Stock Prusa MK3s PSU 240W Delta
+- Gates Belt
 - BTT SKR 1.4 Turbo or NA
 - TMC 2209
-- 60W Heater Cartridge
-- PT1000 Pro Thermistor
-- Dragon Hoten v2
-- 0.4 or 0.6 Nozzle
-- Nylock mod (M3x16mm, nylon washer, nylon nut)
+- 50W, 60W Heater Cartridge
+- Dragon Hoten v2 HF Ceramic Core, Titanium, Copper Heat Sink 
+- Termistor NTC100K or P10000 Pro
+- 0.4 or 0.6 Nozzle (HS, CHT)
+- Nylock Mod (M3x16mm, Nylon Washer, Nylon Nut)
 
 ## Pre-Check
 - Get Z offset value from your current firmware (Menu -> Calibration -> Z-offset), you will need it for the Klipper config.

@@ -20,14 +20,17 @@ max_velocity: 300
 max_z_accel: 300
 
 [extruder]
-nozzle_diameter: 0.400 #0.600
+nozzle_diameter: 0.400
 filament_diameter: 1.750
-sensor_type: EPCOS 100K B57560G104F #PT1000
+sensor_type: EPCOS 100K B57560G104F
 smooth_time: 1.0
 min_temp: 0
 max_temp: 305
 min_extrude_temp: 170
 pressure_advance: 0.06
+
+[bed_mesh]
+probe_count: 37, 37
 
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
@@ -51,4 +54,4 @@ pressure_advance: 0.06
 #*# shaper_freq_y = 48.2
 #*#
 #*# [probe]
-#*# z_offset = 0.8
+#*# z_offset = 1.2
