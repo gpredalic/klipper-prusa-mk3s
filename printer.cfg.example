@@ -1,4 +1,4 @@
-[include klipper-prusa-mk3s/mk3s/BTT_SKR_14.cfg]
+[include klipper-prusa-mk3s/mk3s/btt_skr_14.cfg]
 [include klipper-prusa-mk3s/mk3s/steppers.cfg]
 [include klipper-prusa-mk3s/mk3s/bed_mesh.cfg]
 [include klipper-prusa-mk3s/mk3s/display.cfg]
@@ -6,7 +6,7 @@
 [include klipper-prusa-mk3s/macros.cfg]
 
 [mcu]
-serial: /dev/serial/by-id/usb-Klipper_lpc1769_09B0010DE284D795E0674762C32000F5-if00
+serial: /dev/ttyAMA0
 restart_method: command
 
 [mcu rpi]
@@ -29,23 +29,20 @@ max_temp: 305
 min_extrude_temp: 170
 pressure_advance: 0.06
 
-[bed_mesh]
-probe_count: 37, 37
-
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
 #*#
 #*# [heater_bed]
 #*# control = pid
-#*# pid_kp = 57.006
-#*# pid_ki = 0.854
-#*# pid_kd = 951.288
+#*# pid_kp = 55.520
+#*# pid_ki = 0.873
+#*# pid_kd = 882.771
 #*#
 #*# [extruder]
 #*# control = pid
-#*# pid_kp = 26.222
-#*# pid_ki = 1.681
-#*# pid_kd = 102.267
+#*# pid_kp = 19.179
+#*# pid_ki = 0.830
+#*# pid_kd = 110.760
 #*#
 #*# [input_shaper]
 #*# shaper_type_x = mzv
@@ -54,4 +51,4 @@ probe_count: 37, 37
 #*# shaper_freq_y = 48.2
 #*#
 #*# [probe]
-#*# z_offset = 1.2
+#*# z_offset = 0.9
